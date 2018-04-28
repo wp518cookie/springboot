@@ -14,6 +14,7 @@
         <module>spring-boot-model</module>
         <module>spring-boot-mongodb</module>
         <module>spring-boot-redis</module>
+        <module>spring-boot-elasticsearch</module>
     </modules>
 
     <parent>
