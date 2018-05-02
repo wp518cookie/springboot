@@ -15,12 +15,17 @@ public class CityController {
     private CityService cityService;
 
     @PutMapping
-    public String addCity(@ModelAttribute City city) {
+    public String addCity(@RequestBody City city) {
         return cityService.save(city).toString();
     }
 
     @GetMapping(path = "/{id}")
     public String getCityById(@PathVariable Long id) {
         return cityService.getCityById(id);
+    }
+
+    @GetMapping
+    public String listCity() {
+        return cityService.listCity();
     }
 }

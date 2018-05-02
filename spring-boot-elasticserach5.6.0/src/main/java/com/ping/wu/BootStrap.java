@@ -1,6 +1,6 @@
 package com.ping.wu;
 
-import com.ping.wu.esclient.EsClientConfig;
+import com.ping.wu.config.EsClientConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Import;
