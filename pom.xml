@@ -15,7 +15,6 @@
         <module>spring-boot-mongodb</module>
         <module>spring-boot-redis</module>
         <module>spring-boot-elasticsearch</module>
-        <module>spring-boot-elasticserach5.6.0</module>
     </modules>
 
     <parent>

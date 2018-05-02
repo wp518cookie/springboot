@@ -2,6 +2,7 @@ package com.ping.wu.esclient;
 
 import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.settings.Settings;
+import org.elasticsearch.common.transport.InetSocketTransportAddress;
 import org.elasticsearch.common.transport.TransportAddress;
 import org.elasticsearch.transport.client.PreBuiltTransportClient;
 import org.springframework.beans.factory.annotation.Value;
@@ -40,7 +41,7 @@ public class EsClientConfig {
                     String[] hostport = nodes[i].split(":");
                     String host = hostport[0];
                     String port = hostport[1];
-                    client.addTransportAddress(new TransportAddress(InetAddress.getByName(host), Integer.valueOf(port)));
+                    client.addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName(host), Integer.valueOf(port)));
                 }
                 return client;
             } catch (Exception e) {
